@@ -1,0 +1,142 @@
+
+*{box-sizing:border-box;}
+
+.row::after{
+    content:"";
+    clear:both;
+    display:table;
+}
+[class*="col-"]{
+    float:left;
+    padding:15px;
+    width=100%;
+    margin-left:10px;/*for mobiles*/
+}
+@media only screen and (min-width:768px){
+    /*for desktop*/
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+img{
+    height:auto;
+    width:100%;
+}
+body{
+    width:1920px;
+    height:1204px;
+}
+.home-design{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px; 
+    height: 1080px;
+    background: transparent url('../images/home_design.png') 0% 0% no-repeat padding-box;
+    opacity:0.5;
+}
+.rectangle_1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 109px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+}
+.website_name_top{
+    position: absolute;
+    top: 27px;
+    left: 62px;
+    width: 704px;
+    height: 56px;
+    text-align: left;
+    font: Bold 40px/53px Segoe UI;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+}
+.rectangle_5{
+    position: absolute;
+    top: 362px;
+    left: 613px;
+    width: 722px;
+    height: 397px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 40px #1122340F;
+    border-radius: 10px;
+    opacity: 1;
+}
+.rectangle_114{
+    position: absolute;
+    top: 1080px;
+    left: -1px;
+    width: 1921px;
+    height: 124px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.website_name_bottom{
+    position: absolute;
+    top: 1126px;
+    left: 1581px;
+    width: 292px;
+    height: 33px;
+    text-align: right;
+    font: Bold 25px/33px Segoe UI;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+}
+#id_username{
+    position: absolute;
+    top: 448px;
+    left: 712px;
+    width: 523px;
+    height: 27px;
+    opacity:1;
+    border: none;
+    border-bottom: 2px solid;
+}
+#id_password{
+    position: absolute;
+    top: 514px;
+    left: 712px;
+    width: 523px;
+    height: 27px;
+    opacity: 1;
+    border: none;
+    border-bottom: 2px solid;
+}
+#login{
+    position: absolute;
+    top: 581px;
+    left: 863px;
+    width: 195px;
+    height: 61px;
+    background: #376BAA 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 1;
+}
+.login_text{
+    position: absolute;
+    top: 600px;
+    left: 939px;
+    width: 42px;
+    height: 23px;
+    text-align: center;
+    font: 'Regular' 16px/25px 'Poppins';
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}

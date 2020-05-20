@@ -1,0 +1,36 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1290px, initial-scale=1">
+<title>Education</title>
+<link href="{%static 'css/base1.css'%}" rel="stylesheet">
+</head>
+<body>
+    <div class="website_name_top">DUMMY WEBSITE NAME</div>
+    <div class="rectangle_1"></div>
+    <div class="logout_button"></div>
+    {% if user.is_authenticated %}
+        <a  href="{%url 'logout'%}"><p class="logout_text">Logout</p></div>
+    {% else %}
+        <a  href=""><p class="logout_text">Login</p></div>
+    {% endif %}
+    <div class="select_class_button"></div>
+    <a href="" style="text-decoration: none;"><p class="select_class_text">Select class</p></a>
+{%block content%}
+{%endblock content%}
+<div class="rectangle_114"></div>
+<div class="website_name_bottom">DUMMY WEBSITE NAME</div>
+ <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+ <!-- jQuery library -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
+ <!-- Latest compiled JavaScript -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+
+</body>
+</html>
+

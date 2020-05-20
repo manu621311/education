@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block title%}Home{%endblock title%}
+{%block content%}
+<div class="home-design"></div>
+<div class="rectangle_1"></div>
+<div class="website_name_top">DUMMY WEBSITE NAME</div>
+<div class="rectangle_5">
+    
+</div>
+<form method="POST">
+    {% csrf_token %}
+    <!--{% if form.username.errors %}
+    <ol>
+    {% for error in form.errors %}
+        <li><strong>{{ error|escape }}</strong></li>
+    {% endfor %}
+    </ol>
+    {% endif %}-->
+    <input type="text" name="username" id="id_username" placeholder="Username" required >
+    <input type="password" name="password" id="id_password" placeholder="Password" required>
+    
+    <input class="login_text" type="submit" id="login" value="Login">
+</form>
+{%endblock content%}
+
