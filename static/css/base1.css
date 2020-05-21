@@ -96,6 +96,8 @@ body{
     width: 65px;
     height: 23px;
     text-align: left;
+    font-size: medium;
+    font-weight: bold;
     font: Medium 20px/23px HelveticaNeue;
     letter-spacing: 0px;
     color: #2680EB;
@@ -121,8 +123,50 @@ body{
     width: 111px;
     height: 23px;
     text-align: left;
+    font-size: medium;
+    font-weight: bold;
     font: medium 20px/23px 'HelveticaNeue';
     letter-spacing: 0px;
     color: #2680EB;
     opacity: 1;    
+}
+.rectangle_112{
+    position: absolute;
+    top: 109px;
+    left: 0px;
+    width: 1921px;
+    height: 76px;
+    background: #2680EB 0% 0% no-repeat padding-box;
+    opacity: 1;    
+}
+.lessons_button{
+    position: absolute;
+    top: 109px;
+    left: 92px;
+    width: 172px;
+    height: 77px;
+    opacity: 1;    
+}
+.button_text{
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 21px;
+    color: white;
+    text-align: center;
+}
+.assignment_button{
+    position: absolute;
+    top: 109px;
+    left: 264px;
+    width: 208px;
+    height: 77px;
+    opacity: 1;
+}
+.live_streaming_button{
+    position: absolute;
+    top: 109px;
+    left: 472px;
+    width: 256px;
+    height: 77px;
+    opacity: 1;
 }

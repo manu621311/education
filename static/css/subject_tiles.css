@@ -1,0 +1,80 @@
+.telugu{
+    position: absolute;
+    top: 383px;
+    left: 248px;
+    width: 323px;
+    height: 198px;
+    background: transparent linear-gradient(125deg, #1D976C 0%, #9DD138 100%) 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 1;
+}
+.hindi{
+    position: absolute;
+    top: 383px;
+    left: 611px;
+    width: 323px;
+    height: 197px;
+    background: transparent linear-gradient(125deg, #2375D3 0%, #3BA9FE 100%) 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 1;    
+}
+.science{
+    position: absolute;
+    top: 383px;
+    left: 986px;
+    width: 323px;
+    height: 198px;
+    background: transparent linear-gradient(125deg, #F03748 0%, #F78179 100%) 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 1;    
+}
+.biology{
+    position: absolute;
+    top: 383px;
+    left: 1349px;
+    width: 323px;
+    height: 197px;
+    background: transparent linear-gradient(125deg, #20C7C3 0%, #58F4EF 100%) 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 1;    
+}
+.english{
+    position: absolute;
+    top: 624px;
+    left: 248px;
+    width: 323px;
+    height: 198px;
+    background: transparent linear-gradient(125deg, #A36CFC 0%, #DAACE0 100%) 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 1;    
+}
+.mathematics{
+    position: absolute;
+    top: 624px;
+    left: 611px;
+    width: 323px;
+    height: 197px;
+    background: transparent linear-gradient(125deg, #F791AB 0%, #FCE484 100%) 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 1;    
+}
+.social{
+    position: absolute;
+    top: 624px;
+    left: 986px;
+    width: 323px;
+    height: 198px;
+    background: transparent linear-gradient(125deg, #FF6200 0%, #FD9346 100%) 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 1;    
+}
+.general{
+    position: absolute;
+    top: 624px;
+    left: 1349px;
+    width: 323px;
+    height: 197px;
+    background: transparent linear-gradient(125deg, #2375D3 0%, #67D0E8 100%) 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 1;    
+}
