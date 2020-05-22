@@ -78,3 +78,16 @@
     border-radius: 10px;
     opacity: 1;    
 }
+#telugu_text,#hindi_text,#science_text,#biology_text,#english_text,#mathematics_text,#social_text,#general_text{
+    position: absolute;
+    width: auto;
+    height: 39px;
+    font-size: x-large;
+    text-align: left;
+    font-family: 'Poppins';
+    font: bold 28px/42px 'Poppins';
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;    
+}

@@ -83,6 +83,7 @@ body{
     left: -1px;
     width: 1921px;
     height: 124px;
+    box-shadow: 0px -3px 6px #00000029;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 1;
 }
