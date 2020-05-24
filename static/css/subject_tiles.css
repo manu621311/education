@@ -1,3 +1,92 @@
+#telugu_bar,#hindi_bar,#science_bar,#biology_bar,#english_bar,#mathematics_bar,#social_bar,#general{
+    position: absolute;
+    width: 188px;
+    opacity: 1;
+    height: 15px;
+    border-radius: 2px;
+}
+#telugu_text,#hindi_text,#science_text,#biology_text,#english_text,#mathematics_text,#social_text,#general_text{
+    position: absolute;
+    width: auto;
+    height: 39px;
+    font-size: x-large;
+    text-align: left;
+    font-family: 'Poppins';
+    font: bold 28px/42px 'Poppins';
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;    
+}
+#telugu_count,#hindi_count,#science_count,#biology_count,#english_count,#mathematics_count,#social_count,#general_count{
+    position: absolute;
+    top: 471px;
+    left: 275px;
+    width: 140px;
+    height: 12px;
+    text-align: left;
+    font: lighter 9px/13px 'Poppins';
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;    
+}
+#telugu_bar,#hindi_bar,#science_bar,#biology_bar{
+    top: 519px;
+}
+#english_bar,#mathematics_bar,#social_bar,#general{
+    top: 760px;
+}
+#telugu_bar{
+    left: 275px;
+    background: #80C97E 0% 0% no-repeat padding-box;
+}
+#hindi_bar{
+    left: 637px;
+    background: #56A2F9 0% 0% no-repeat padding-box;
+}
+#science_bar{
+    left: 1013px;
+    background: #EE463A 0% 0% no-repeat padding-box;
+}
+#biology_bar{
+    left: 1375px;
+    background: #58F4EF 0% 0% no-repeat padding-box;
+}
+#english_bar{
+    left: 275px;
+    background: #DAACE0 0% 0% no-repeat padding-box;
+}
+#mathematics_bar{
+    left: 637px;
+    background: #FCE484 0% 0% no-repeat padding-box;
+}
+#social_bar{
+    left: 1013px;
+    background: #FD9346 0% 0% no-repeat padding-box;
+}
+#general{
+    left: 1375px;
+    background: #67D0E8 0% 0% no-repeat padding-box;
+}
+[class*="subject_progress_"]{
+    position: absolute;
+    height:15px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    opacity: 1;
+}
+[class*="progress_"]{
+    position: absolute;
+    font: SemiBold 20px/32px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+    top: 509px;
+    left: 870px;
+    width: 40px;
+    height: 28px;    
+}
 .telugu{
     position: absolute;
     top: 383px;
@@ -76,18 +165,5 @@
     height: 197px;
     background: transparent linear-gradient(125deg, #2375D3 0%, #67D0E8 100%) 0% 0% no-repeat padding-box;
     border-radius: 10px;
-    opacity: 1;    
-}
-#telugu_text,#hindi_text,#science_text,#biology_text,#english_text,#mathematics_text,#social_text,#general_text{
-    position: absolute;
-    width: auto;
-    height: 39px;
-    font-size: x-large;
-    text-align: left;
-    font-family: 'Poppins';
-    font: bold 28px/42px 'Poppins';
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    text-transform: uppercase;
     opacity: 1;    
 }

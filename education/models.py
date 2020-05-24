@@ -28,3 +28,13 @@ class Subjects(models.Model):
     subjects= models.CharField(max_length=150,verbose_name='subject')
     def __str__(self):
         return self.subjects
+class Assignments(models.Model):
+    course=models.ForeignKey(
+        Course,
+        on_delete=models.CASCADE,
+        related_name='assignments')
+    assignment_video=models.FileField(upload_to='videos/', null=True,verbose_name='video')
+    assignment_content=models.CharField(max_length=150,verbose_name='subject')
+    assignment_progress=models.IntegerField(null=True,blank=False)
+    assignment_deadline=models.DateTimeField(auto_now_add=False)
+    
