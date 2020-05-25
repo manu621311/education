@@ -8,6 +8,7 @@
 <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 <link href="{%static 'css/base1.css'%}" rel="stylesheet">
 <link href="{%static 'css/subject_tiles.css'%}" rel="stylesheet">
+<link href="{%static 'css/assignments_list.css'%}" rel="stylesheet">
 </head>
 <body>
     <div class="website_name_top">DUMMY WEBSITE NAME</div>
@@ -18,7 +19,7 @@
     <a href="" style="text-decoration: none;"><p class="select_class_text">Select class</p></a>
     <div class="rectangle_112"></div> 
     <div class="lessons_button"><p class="button_text">Lessons</p></div>
-    <div class="assignment_button"><p class="button_text">Assignment</p></div>
+    <a href="{%url 'assignment'%}"><div class="assignment_button"><p href="{%url 'assignment'%}" class="button_text">Assignment</p></div></a>
     <div class="live_streaming_button"><p class="button_text">Live Streaming</p></div>
 {%block content%}
 {%endblock content%}

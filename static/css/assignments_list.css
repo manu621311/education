@@ -1,0 +1,50 @@
+#heading{
+    position: absolute;
+    height: 35px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+    font: bolder 25px/38px 'Poppins';    
+}
+#detail{
+    position: absolute;
+    height: 12px;
+    text-align: left;
+    font: lighter 11px/17px 'Poppins';
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;    
+    width: 112px;
+}
+.block_1,.block_2,.block_3,.block_4{
+    border-radius: 10px;
+    opacity: 1;
+    position: absolute;
+}
+.block_1{
+    top: 335px;
+    left: 498px;
+    width: 396px;
+    height: 300px;
+}
+.block_2{
+    top: 335px;
+    left: 936px;
+    width: 396px;
+    height: 210px;    
+}
+.block_3{
+    top: 653px;
+    left: 498px;
+    width: 396px;
+    height: 215px;
+}
+.block_4{
+    top: 561px;
+    left: 936px;
+    width: 396px;
+    height: 311px;    
+}
+
+

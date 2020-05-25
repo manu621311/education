@@ -154,6 +154,7 @@ body{
     margin-top: 21px;
     color: white;
     text-align: center;
+    text-decoration: none;
 }
 .assignment_button{
     position: absolute;
