@@ -57,3 +57,12 @@ class Assignment_Reading(models.Model):
         related_name='assignment_reading'
     )
     assignment_reading=models.FileField(upload_to='PDF/',null=True,blank=True,verbose_name='reading_material')
+class Live_Class(models.Model):
+    course=course=models.ForeignKey(
+        Course,
+        on_delete=models.CASCADE,
+        related_name='live_class')
+    topic=models.CharField(max_length=20,blank=False,default='topic_name')
+    scheduled_time=models.DateTimeField(auto_now_add=False)
+    def __str__(self):
+        return str(self.course)

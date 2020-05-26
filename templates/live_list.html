@@ -1,0 +1,16 @@
+{%extends 'base1.html'%}
+{%load static%}
+{%block title%}Home{%endblock title%}
+{%block content%}
+<div id="ongoing">Ongoing</div>
+<a href=""><div class="live_1"></div></a>
+<a href=""><div class="live_2"></div></a>
+
+<div id="scheduled">Scheduled Live sessions</div>
+
+<a href=""><div class="live_3"></div></a>
+<a href=""><div class="live_4"></div></a>
+
+<script src="{%static 'js/live_list.js'%}"></script>
+
+{%endblock content%}

@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import HomePageView,AssignmentListView,\
+from .views import HomePageView,AssignmentListView,LiveListView,\
     CourseListAPIView,CourseDetailAPIView,TestView,\
-    Request_Count,Request_Assign_Count
+    Request_Count,Request_Assign_Count,Request_Live_List
 
 urlpatterns=[
     path('test/',TestView.as_view()),
@@ -11,7 +11,9 @@ urlpatterns=[
 
     path('',HomePageView.as_view(),name='home'),
     path('assignment/',AssignmentListView.as_view(),name='assignment'),
+    path('live_class/',LiveListView.as_view(),name='live_classes'),
     
     path('request_count/',Request_Count,name='request_count'),
     path('request_assign_count/',Request_Assign_Count),
+    path('request_live_list/',Request_Live_List),
 ]

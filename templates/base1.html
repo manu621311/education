@@ -9,6 +9,7 @@
 <link href="{%static 'css/base1.css'%}" rel="stylesheet">
 <link href="{%static 'css/subject_tiles.css'%}" rel="stylesheet">
 <link href="{%static 'css/assignments_list.css'%}" rel="stylesheet">
+<link href="{%static 'css/live_list.css'%}" rel="stylesheet">
 </head>
 <body>
     <div class="website_name_top">DUMMY WEBSITE NAME</div>
@@ -20,7 +21,7 @@
     <div class="rectangle_112"></div> 
     <div class="lessons_button"><p class="button_text">Lessons</p></div>
     <a href="{%url 'assignment'%}"><div class="assignment_button"><p href="{%url 'assignment'%}" class="button_text">Assignment</p></div></a>
-    <div class="live_streaming_button"><p class="button_text">Live Streaming</p></div>
+    <a href="{%url 'live_classes'%}"><div class="live_streaming_button"><p class="button_text">Live Streaming</p></div></a>
 {%block content%}
 {%endblock content%}
 <div class="rectangle_114"></div>

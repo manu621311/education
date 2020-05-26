@@ -1,0 +1,94 @@
+#ongoing{
+    position: absolute;
+    top: 253px;
+    left: 119px;
+    width: 230px;
+    height: 27px;
+    text-align: left;
+    font: bold 18px/21px 'HelveticaNeue';
+    letter-spacing: 0px;
+    color: #D93F34;
+    opacity: 1;    
+}
+#scheduled{
+    position: absolute;
+    top: 514px;
+    left: 119px;
+    width: 230px;
+    height: 27px;
+    text-align: left;
+    font: bold 18px/21px 'HelveticaNeue';
+    letter-spacing: 0px;
+    color: #5484ED;
+    opacity: 1;
+}
+#live_subject{
+    position: relative;
+    height: 17px;
+    text-align: left;
+    font: lighter 12px/18px 'Poppins';
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+}
+#live_heading{
+    position: relative;
+    width: 169px;
+    height: 25px;
+    text-align: left;
+    font: Bold 18px/27px 'Poppins';
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;    
+}
+#live_time{
+    position: relative;
+    width: 182px;
+    height: 17px;
+    text-align: left;
+    font: lighter 12px/18px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+.live_1{
+    position: absolute;
+    top: 296px;
+    left: 119px;
+    background: transparent linear-gradient(125deg, #1D976C 0%, #9DD138 100%) 0% 0% no-repeat padding-box;
+    width: 275px;
+    height: 168px;
+    border-radius: 10px;
+    opacity: 1;    
+}
+.live_2{
+    position: absolute;
+    top: 296px;
+    left: 417px;
+    background: transparent linear-gradient(125deg, #2375D3 0%, #3BA9FE 100%) 0% 0% no-repeat padding-box;
+    width: 275px;
+    height: 168px;
+    border-radius: 10px;
+    opacity: 1;    
+}
+.live_3{
+    position: absolute;
+    top: 557px;
+    left: 119px;
+    background: transparent linear-gradient(125deg, #1D976C 0%, #9DD138 100%) 0% 0% no-repeat padding-box;
+    width: 275px;
+    height: 168px;
+    border-radius: 10px;
+    opacity: 1;    
+}
+.live_4{
+    position: absolute;
+    top: 557px;
+    left: 417px;
+    background: transparent linear-gradient(125deg, #2375D3 0%, #3BA9FE 100%) 0% 0% no-repeat padding-box;
+    width: 275px;
+    height: 168px;
+    border-radius: 10px;
+    opacity: 1;    
+}

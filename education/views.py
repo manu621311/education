@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import TemplateView,ListView,DetailView
-from .models import Course,Exams,Subjects,Videos,Assignments,Assignment_Video,Assignment_Reading
+from .models import Course,Exams,Subjects,Videos,Assignments,Assignment_Video,Assignment_Reading,Live_Class
 from django.http import HttpResponse
 from rest_framework import generics
 from .serializers import CourseSerializer
@@ -29,6 +29,11 @@ class AssignmentListView(LoginRequiredMixin,ListView):
     template_name='assignments_list.html'
     model=Course
     context_object_name='course'
+    login_url='login'
+class LiveListView(LoginRequiredMixin,ListView):
+    template_name='live_list.html'
+    model=Live_Class
+    context_object_name='liveclass'
     login_url='login'
 
 def Request_Count(request):
@@ -63,6 +68,21 @@ def Request_Assign_Count(request):
     count_dict['status']=status
     count_dict['deadline']=deadline
     return HttpResponse(json.dumps(count_dict))
+
+def Request_Live_List(request):
+    subject_name,topic_name,deadline,count_dict=\
+        [],[],[],{}
+    a=Live_Class.objects.all()
+    for i in range(0,a.count()):
+        subject_name.append(str(a[i].course))
+        topic_name.append(a[i].topic)
+        deadline.append(str(a[i].scheduled_time))
+    count_dict['subject_name']=subject_name
+    count_dict['deadline']=deadline
+    count_dict['topic_name']=topic_name
+    return HttpResponse(json.dumps(count_dict))
+
+
 
 
 
