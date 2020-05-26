@@ -1,5 +1,5 @@
 #heading{
-    position: absolute;
+    position: relative;
     height: 35px;
     letter-spacing: 0px;
     color: #FFFFFF;
@@ -8,7 +8,7 @@
     font: bolder 25px/38px 'Poppins';    
 }
 #detail{
-    position: absolute;
+    position: relative;
     height: 12px;
     text-align: left;
     font: lighter 11px/17px 'Poppins';
@@ -16,6 +16,75 @@
     color: #FFFFFF;
     opacity: 1;    
     width: 112px;
+}
+#bar{
+    position: relative;
+    width: 230px;
+    height: 13px;
+    border-radius: 2px;
+    opacity: 1;    
+}
+#progress_bar{
+    position: relative;
+    height: 13px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    opacity: 1;    
+}
+#progress{
+    position: relative;
+    width: 30px;
+    height: 25px;
+    text-align: left;
+    font: lighter 18px/29px 'Poppins';
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;    
+}
+#comment{
+    position: relative;
+    width: 97px;
+    height: 19px;
+    text-align: left;
+    font: lighter 13px/20px 'Poppins';
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;    
+}
+#timer1{
+    position: relative;
+    width: 258px;
+    height: 55px;
+    font: lighter 39px/59px 'Poppins';
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1; 
+}
+#timer4{
+    position: relative;
+    width: 258px;
+    height: 55px;
+    font: lighter 39px/59px 'Poppins';
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1; 
+}
+#format1{
+    position: relative;
+    font: lighter 11px/17px 'Poppins';
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    height: 16px;
+}
+#format4{
+    position: relative;
+    font: lighter 11px/17px 'Poppins';
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    height: 16px;
 }
 .block_1,.block_2,.block_3,.block_4{
     border-radius: 10px;
@@ -27,24 +96,28 @@
     left: 498px;
     width: 396px;
     height: 300px;
+    background: transparent linear-gradient(131deg, #CB2D3E 0%, #EF473A 100%) 0% 0% no-repeat padding-box;
 }
 .block_2{
     top: 335px;
     left: 936px;
     width: 396px;
     height: 210px;    
+    background: transparent linear-gradient(122deg, #1D976C 0%, #9DD138 100%) 0% 0% no-repeat padding-box;
 }
 .block_3{
     top: 653px;
     left: 498px;
     width: 396px;
     height: 215px;
+    background: transparent linear-gradient(122deg, #1D976C 0%, #9DD138 100%) 0% 0% no-repeat padding-box;
 }
 .block_4{
     top: 561px;
     left: 936px;
     width: 396px;
     height: 311px;    
+    background: transparent linear-gradient(132deg, #2375D3 0%, #3BA9FE 100%) 0% 0% no-repeat padding-box;
 }
 
 

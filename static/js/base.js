@@ -40,6 +40,7 @@ function connect_nodes(flag,id_array,value_array,tag){
             }
             if(flag=="subject_progress"){
                 node.setAttribute('class',id_array[i]);
+                console.log(value_array.progress[i])
                 node.style.width=(value_array.progress[i]*124/100).toString() +"px";
                 node.style.height="15px";
             }if(flag!="progress"){
