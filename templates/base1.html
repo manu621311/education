@@ -3,13 +3,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=1290px, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Education</title>
 <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 <link href="{%static 'css/base1.css'%}" rel="stylesheet">
 <link href="{%static 'css/subject_tiles.css'%}" rel="stylesheet">
 <link href="{%static 'css/assignments_list.css'%}" rel="stylesheet">
 <link href="{%static 'css/live_list.css'%}" rel="stylesheet">
+<link href="{%static 'css/course_detail.css'%}" rel="stylesheet">
 </head>
 <body>
     <div class="website_name_top">DUMMY WEBSITE NAME</div>
@@ -19,7 +20,7 @@
     <div class="select_class_button"></div>
     <a href="" style="text-decoration: none;"><p class="select_class_text">Select class</p></a>
     <div class="rectangle_112"></div> 
-    <div class="lessons_button"><p class="button_text">Lessons</p></div>
+    <a href="{%url 'home'%}"><div class="lessons_button"><p class="button_text">Lessons</p></div></a>
     <a href="{%url 'assignment'%}"><div class="assignment_button"><p href="{%url 'assignment'%}" class="button_text">Assignment</p></div></a>
     <a href="{%url 'live_classes'%}"><div class="live_streaming_button"><p class="button_text">Live Streaming</p></div></a>
 {%block content%}

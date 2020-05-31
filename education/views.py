@@ -14,7 +14,29 @@ class HomePageView(LoginRequiredMixin,ListView):
     model=Course
     context_object_name='course'
     login_url='login'
-
+class CourseDetailView(LoginRequiredMixin,DetailView):
+    template_name='course_detail.html'
+    model=Course
+    context_object_name='course'
+    login_url='login'
+    def get_context_data(self, **kwargs):#To pass extra data
+        subject=Subjects.objects.all()
+        context = super().get_context_data(**kwargs)
+        context['subject'] = subject
+        return context
+#Assignment classes
+class AssignmentListView(LoginRequiredMixin,ListView):
+    template_name='assignments_list.html'
+    model=Course
+    context_object_name='course'
+    login_url='login'
+#Live classes
+class LiveListView(LoginRequiredMixin,ListView):
+    template_name='live_list.html'
+    model=Live_Class
+    context_object_name='liveclass'
+    login_url='login'
+#APIs
 class CourseListAPIView(generics.ListCreateAPIView):
     queryset=Course.objects.all()
     serializer_class=CourseSerializer
@@ -24,26 +46,20 @@ class CourseDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class=CourseSerializer
 class TestView(TemplateView):
     template_name='test.html'
-
-class AssignmentListView(LoginRequiredMixin,ListView):
-    template_name='assignments_list.html'
-    model=Course
-    context_object_name='course'
-    login_url='login'
-class LiveListView(LoginRequiredMixin,ListView):
-    template_name='live_list.html'
-    model=Live_Class
-    context_object_name='liveclass'
-    login_url='login'
-
+#Request Functions
 def Request_Count(request):
     exam_count,subject_count,video_count,progress,count_dict=[],[],[],[],{}
     a=Course.objects.all()
     for i in range(0,a.count()):
-        progress.append(a[i].course_progress)
-        exam_count.append(a[i].exams.count())
+        sum1,sum2=0,0
         subject_count.append(a[i].subjects.count())
-        video_count.append(a[i].videos.count())
+        x=a[i].subjects.all()
+        for j in range(0,a[i].subjects.count()):
+            sum1+=x[j].videos.count()
+            sum2+=x[j].exams.count()
+        video_count.append(sum1)
+        exam_count.append(sum2)
+        progress.append(a[i].course_progress)
     count_dict['exam_count']=exam_count
     count_dict['subject_count']=subject_count
     count_dict['video_count']=video_count

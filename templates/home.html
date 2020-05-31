@@ -3,13 +3,27 @@
 {%block title%}Home{%endblock title%}
 {%block content%}
 
-<a href=""><div class="telugu"></div></a>
-<a href=""><div class="hindi"></div></a>
-<a href=""><div class="science"></div></a>
-<a href=""><div class="biology"></div></a>
-<a href=""><div class="english"></div></a>
-<a href=""><div class="mathematics"></div></a>
-<a href=""><div class="social"></div></a>
-<a href=""><div class="general"></div></a>
-<script src="{%static 'js/base.js'%}"></script>
+
+<a class="link1" href="" ><div class="telugu"></div></a>
+<a class="link2"><div class="hindi"></div></a>
+<a class="link3"><div class="science"></div></a>
+<a class="link4"><div class="biology"></div></a>
+<a class="link5"><div class="english"></div></a>
+<a class="link6"><div class="mathematics"></div></a>
+<a class="link7"><div class="social"></div></a>
+<a class="link8"><div class="general"></div></a>
+
+<script src="{%static 'js/home.js'%}"></script>
+<script>
+var i=1,x;
+{%for course in course%}
+console.log('{{course}}');
+x=document.getElementsByClassName('link'+i.toString());
+x[0].href="{%url 'course_detail' course.pk %}";
+console.log(i);
+i+=1;
+{%endfor%}
+</script>
+
 {%endblock content%}
+<!--href="{%url 'course_detail' course.pk %}"-->
