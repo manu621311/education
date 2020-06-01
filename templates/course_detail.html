@@ -6,14 +6,34 @@
 <div class="cloud1"></div>
 <div class="cloud2"></div>
 <div class="course_head">{{course.course_name}}</div>
+<div style="top: 580px;left: 153px;position:absolute;width: 1770px;">
 {%for subject in course.subjects.all%}
 
-<div class="row">
-xxxxxxx
-{{subject.subject}}
+<div class="row" >
+<p class="sub_head">{{subject.subjects}}</p>
+{%for video in subject.videos.all%}
+<a href="{%url 'subject' subject.pk%}"><div class="detail_tile col-1_5">
+    <p class="tile_tag">Video</p>
+    <div class="detail_pic"><img src="{%static 'images/detail_pic.png'%}" ></div>
+    <p class="tile_info">{{video.video_info}}</p>
+</div></a>
+{%endfor%}
+{%for reading in subject.readings.all%}
+<a href="{%url 'subject' subject.pk%}"><div class="detail_tile col-1_5">
+    <p class="tile_tag">PDF</p>
+    <div class="detail_pic"><img src="{%static 'images/detail_pic.png'%}" ></div>
+    <p class="tile_info">{{reading.reading_info}}</p>  
+</div></a>
+{%endfor%}
+{%for exam in subject.exams.all%}
+<a href="{%url 'subject' subject.pk%}"><div class="exam_detail_tile col-1_5">
+    <div class="detail_pic"><img src="{%static 'images/exam_tile.png'%}" ></div>
+    <p class="tile_info" style="text-align: right;top:27px">Practice Test</p>  
+</div></a>
+{%endfor%}
+
 </div>
 
-
-
 {%endfor%}
+</div>
 {%endblock content%}

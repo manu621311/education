@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
   }
+.row{
+  width: 1770px;
+}
 .row::after {
     content: "";
     clear: both;
@@ -12,6 +15,7 @@
     padding: 15px;
 }
 .col-1 {width: 8.33%;}
+.col-1_5{width:271px}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
 .col-4 {width: 33.33%;}
@@ -60,4 +64,71 @@
   width: 1198px;
   height: 237px;  
   background: transparent url('../images/cloud2.png') 0% 0% no-repeat padding-box;
+}
+.sub_head{
+  width: 230px;
+  height: 27px;
+  text-align: left;
+  font: bold 18px/21px 'Poppins';
+  letter-spacing: 0px;
+  color: #5484ED;    
+  margin-top: 45px;
+}
+.detail_tile{
+  height: 181px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #0000003B;
+  border-radius: 5px;  
+  margin-left: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.detail_pic{
+  position: relative;
+  left:22%;
+  width:122px;
+}
+.tile_info{
+  position: relative;
+  text-align: left;
+  height: 40px;
+  text-align: left;
+  font: normal 12px/15px 'Roboto';
+  letter-spacing: 0px;
+  color: #343434;  
+}
+.tile_tag{
+  width: 36px;
+  height: 17px;
+  text-align: left;
+  font: normal 12px/14px 'Roboto';
+  letter-spacing: 0px;
+  color: #C0C0C0;  
+}
+.exam_detail_tile{
+  height: 181px;
+  background: transparent linear-gradient(56deg, #F792AB 0%, #FCE584 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #0000003B;
+  border-radius: 5px;  
+  margin-left: 30px;
+  margin-top: 20px;    
+}
+.p_bar{
+  margin-top: 40px;
+  width: 197px;
+  height: 38px;
+  text-align: left;
+  font: bold 20px/23px 'Poppins';
+  letter-spacing: 0px;
+  color: #D70000;  
+}
+.sub_info{
+  margin-top:60px;
+  width: 465px;
+  height: 82px;
+  text-align: left;
+  font: bold 26px/39px 'Poppins';
+  letter-spacing: 0px;
+  color: #112234;
+  opacity: 1;  
 }

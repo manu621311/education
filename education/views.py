@@ -24,6 +24,11 @@ class CourseDetailView(LoginRequiredMixin,DetailView):
         context = super().get_context_data(**kwargs)
         context['subject'] = subject
         return context
+class SubjectDetailView(LoginRequiredMixin,DetailView):
+    template_name='subject.html'
+    model=Subjects
+    context_object_name='subject'
+    login_url='login'
 #Assignment classes
 class AssignmentListView(LoginRequiredMixin,ListView):
     template_name='assignments_list.html'

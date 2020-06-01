@@ -17,6 +17,8 @@ class Subjects(models.Model):
         on_delete=models.CASCADE,
         related_name='subjects')
     subjects= models.CharField(max_length=150,verbose_name='subject',null=False)
+    subject_info=models.CharField(max_length=150,blank=False,null=False,default="It is the medium in which objects and subjects actually come into existence, and is the medium in which their virtuality resides.\
+This book is an introduction to logic, as contemporary logicians now understand the subject.")
     def __str__(self):
         return str(self.course)
     
@@ -26,6 +28,7 @@ class Videos(models.Model):
         on_delete=models.CASCADE,
         related_name='videos')
     videos= models.FileField(upload_to='videos/', null=True,verbose_name='video',default='')
+    video_info=models.CharField(max_length=500,verbose_name='Info',null=False,default='')
     def __str__(self):
         return str(self.subject)
 class Exams(models.Model):
@@ -42,6 +45,7 @@ class Readings(models.Model):
         on_delete=models.CASCADE,
         related_name='readings')
     readings= models.FileField(upload_to='PDF/', null=True,verbose_name='content')
+    reading_info= models.CharField(max_length=500,verbose_name='Info',null=False,default='')
     def __str__(self):
         return str(self.subject)
 #Assignments section

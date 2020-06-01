@@ -1,0 +1,50 @@
+{%extends 'base1.html'%}
+{%load static%}
+{%block title%}Course Info{%endblock title%}
+{%block content%}
+<div style="top: 280px;left: 153px;position:absolute;width: 1770px;">
+    <div class="row">
+        <div class="col-6">
+            <video id="video" width="799px" height="447px" controls>
+            <source src="{{subject.videos.all.0.videos.url}}" type="video/mp4">
+            </video>
+        </div>
+        <div class="col-5 sub_info">{{subject.subject_info}}</div>
+    </div>  
+<p class="p_bar">Progress Bar</p>        
+<div class="row" style="margin-top: 20px;"> 
+{%for video in subject.videos.all%}
+<div class="video detail_tile col-1_5">
+    <p style="display:none">{{video.videos.url}}</p>
+    <p class="tile_tag">Video</p>
+    <div class="detail_pic"><img src="{%static 'images/detail_pic.png'%}" ></div>
+    <p class="tile_info">{{video.video_info}}</p>    
+</div>
+{%endfor%}
+{%for reading in subject.readings.all%}
+<div class="detail_tile col-1_5">
+    <p class="tile_tag">PDF</p>
+    <div class="detail_pic"><img src="{%static 'images/detail_pic.png'%}" ></div>
+    <p class="tile_info">{{reading.reading_info}}</p>  
+</div>
+{%endfor%}
+{%for exam in subject.exams.all%}
+<div class="exam_detail_tile col-1_5">
+    <div class="detail_pic"><img src="{%static 'images/exam_tile.png'%}" ></div>
+    <p class="tile_info" style="text-align: right;top:27px">Practice Test</p>  
+</div>
+{%endfor%}
+
+</div>
+</div>
+<script>
+    //{%for video in subject.videos.all%}
+    //console.log('{{subject.videos.all}}');
+    //document.getElementById('video').src='{{video.videos.url}}';
+    //{%endfor%}
+    //var ele=document.getElementsByClassName()
+
+</script>
+
+<script src="{%static 'js/subject.js'%}"></script>
+{%endblock content%}
