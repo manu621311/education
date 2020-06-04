@@ -5,7 +5,7 @@ choice1=(('1','Done'),('2','Not Done'))
 choice2=(('Video','Video'),('PDF','PDF'))
 #Regular Course section
 class Course(models.Model):
-    course_name=models.CharField(max_length=150)
+    course_name=models.CharField(max_length=1000)
     course_progress=models.IntegerField(null=True,blank=False)
     def __str__(self):
         return self.course_name
@@ -16,8 +16,8 @@ class Subjects(models.Model):
         Course,
         on_delete=models.CASCADE,
         related_name='subjects')
-    subjects= models.CharField(max_length=150,verbose_name='subject',null=False)
-    subject_info=models.CharField(max_length=150,blank=False,null=False,default="It is the medium in which objects and subjects actually come into existence, and is the medium in which their virtuality resides.\
+    subjects= models.CharField(max_length=1000,verbose_name='subject',null=False)
+    subject_info=models.CharField(max_length=1000,blank=False,null=False,default="It is the medium in which objects and subjects actually come into existence, and is the medium in which their virtuality resides.\
 This book is an introduction to logic, as contemporary logicians now understand the subject.")
     def __str__(self):
         return str(self.course)
@@ -36,7 +36,7 @@ class Exams(models.Model):
         Subjects,
         on_delete=models.CASCADE,
         related_name='exams')
-    exams= models.CharField(max_length=150,verbose_name='exam',null=True,default='')
+    exams= models.CharField(max_length=1000,verbose_name='exam',null=True,default='')
     def __str__(self):
         return str(self.subject)
 class Readings(models.Model):
