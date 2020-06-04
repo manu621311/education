@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import socket
 from dotenv import load_dotenv
 load_dotenv()
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -21,12 +22,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+ENVIRONMENT=os.getenv('ENVIRONMENT',default='development')
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False############ to unmark for local
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','127.0.0.1']
 
 
 # Application definition
@@ -34,6 +36,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'education.apps.EducationConfig',
     'rest_framework',#3rd party
+    'debug_toolbar', # new
+    'whitenoise.runserver_nostatic', # new 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,6 +52,8 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
+    'django.middleware.cache.UpdateCacheMiddleware',#new
+    'whitenoise.middleware.WhiteNoiseMiddleware', # new 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -55,7 +61,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware', # new
+    'django.middleware.cache.FetchFromCacheMiddleware', # new
+
 ]
+CACHE_MIDDLEWARE_ALIAS = 'default'
+CACHE_MIDDLEWARE_SECONDS = 604800 
+CACHE_MIDDLEWARE_KEY_PREFIX = ''
+
 
 ROOT_URLCONF = 'education_project.urls'
 
@@ -132,3 +145,18 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL='login'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media/')
 MEDIA_URL="/media/"
+if ENVIRONMENT=='production':
+    SECURE_BROWSER_XSS_FILTER=True
+    X_FRAME_OPTIONS='DENY'
+    SECURE_SSL_REDIRECT=True
+    SECURE_HSTS_SECONDS = 3600 # new 
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True # new 
+    SECURE_HSTS_PRELOAD = True # new 
+    SECURE_CONTENT_TYPE_NOSNIFF = True # new
+    SESSION_COOKIE_SECURE=True
+    CSRF_COOKIE_SECURE=True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') # new
+
+import dj_database_url 
+db_from_env = dj_database_url.config(conn_max_age=500) 
+DATABASES['default'].update(db_from_env)

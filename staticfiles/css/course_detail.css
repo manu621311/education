@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+  }
+.row{
+  width: 1770px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    
+}
+.col-1 {width: 8.33%;}
+.col-1_5{width:271px}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.grey{
+  position: absolute;
+  top: 186px;
+  left: 0px;  
+  width: 1920px;
+  height: 298px;
+  background: #E5E5E5 0% 0% no-repeat padding-box;
+  opacity: 1;  
+}
+.course_head{
+  position: absolute;
+  top: 288px;
+  left: 214px;
+  width: 310px;
+  height: 47px;
+  text-align: center;
+  font: bold 40px/70px 'Poppins';
+  letter-spacing: 0px;
+  color: #2A2A2A;
+  opacity: 1;  
+}
+.cloud1{
+  position: absolute;
+  top: 278px;
+  left: -1198px;
+  width: 1920px;
+  height: 237px;
+  background: transparent url('../images/cloud1.png') 0% 0% no-repeat padding-box;
+}
+.cloud2{
+  position: absolute;
+  top: 278px;
+  left: 722px;
+  width: 1198px;
+  height: 237px;  
+  background: transparent url('../images/cloud2.png') 0% 0% no-repeat padding-box;
+}
+.sub_head{
+  width: 230px;
+  height: 27px;
+  text-align: left;
+  font: bold 18px/21px 'Poppins';
+  letter-spacing: 0px;
+  color: #5484ED;    
+  margin-top: 45px;
+}
+.detail_tile{
+  height: 181px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #0000003B;
+  border-radius: 5px;  
+  margin-left: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.detail_pic{
+  position: relative;
+  left:22%;
+  width:122px;
+}
+.tile_info{
+  position: relative;
+  text-align: left;
+  height: 40px;
+  text-align: left;
+  font: normal 12px/15px 'Roboto';
+  letter-spacing: 0px;
+  color: #343434;  
+}
+.tile_tag{
+  width: 36px;
+  height: 17px;
+  text-align: left;
+  font: normal 12px/14px 'Roboto';
+  letter-spacing: 0px;
+  color: #C0C0C0;  
+}
+.exam_detail_tile{
+  height: 181px;
+  background: transparent linear-gradient(56deg, #F792AB 0%, #FCE584 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #0000003B;
+  border-radius: 5px;  
+  margin-left: 30px;
+  margin-top: 20px;    
+}
+.p_bar{
+  margin-top: 40px;
+  width: 197px;
+  height: 38px;
+  text-align: left;
+  font: bold 20px/23px 'Poppins';
+  letter-spacing: 0px;
+  color: #D70000;  
+}
+.sub_info{
+  margin-top:60px;
+  width: 465px;
+  height: 82px;
+  text-align: left;
+  font: bold 26px/39px 'Poppins';
+  letter-spacing: 0px;
+  color: #112234;
+  opacity: 1;  
+}
