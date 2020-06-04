@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False############ to unmark for local
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1']
+ALLOWED_HOSTS = ['educationer.herokuapp.com','localhost','127.0.0.1']
 
 
 # Application definition
@@ -145,6 +145,11 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL='login'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media/')
 MEDIA_URL="/media/"
+INTERNAL_IPS = [
+    # ...
+    '127.0.0.1',
+    # ...
+]
 if ENVIRONMENT=='production':
     SECURE_BROWSER_XSS_FILTER=True
     X_FRAME_OPTIONS='DENY'
