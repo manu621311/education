@@ -84,3 +84,24 @@ class Live_Class(models.Model):
     scheduled_time=models.DateTimeField(auto_now_add=False)
     def __str__(self):
         return str(self.course)
+#For exam
+class CommonExamQuestions(models.Model):
+    question=models.CharField(max_length=200)
+    def __str__(self):
+        return str(self.question)    
+class CommonExamAnswers(models.Model):
+    question=models.ForeignKey(
+        CommonExamQuestions,
+        on_delete=models.CASCADE,
+        related_name='answer'
+    )
+    answer=models.CharField(max_length=100)
+    is_correct = models.BooleanField(default=False)
+    def __str__(self):
+        x=[]
+        x.append(self.answer)
+        x.append(self.is_correct)
+        return str(x)
+
+
+

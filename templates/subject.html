@@ -29,22 +29,14 @@
 </div>
 {%endfor%}
 {%for exam in subject.exams.all%}
-<div class="exam_detail_tile col-1_5">
+<a href="{% url 'common_exam' %}"><div class="exam_detail_tile col-1_5">
     <div class="detail_pic"><img src="{%static 'images/exam_tile.png'%}" ></div>
     <p class="tile_info" style="text-align: right;top:27px">Practice Test</p>  
-</div>
+</div></a>
 {%endfor%}
 
 </div>
 </div>
-<script>
-    //{%for video in subject.videos.all%}
-    //console.log('{{subject.videos.all}}');
-    //document.getElementById('video').src='{{video.videos.url}}';
-    //{%endfor%}
-    //var ele=document.getElementsByClassName()
-
-</script>
 
 <script src="{%static 'js/subject.js'%}"></script>
 {%endblock content%}

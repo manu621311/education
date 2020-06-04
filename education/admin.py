@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Course,Videos,Exams,Subjects,Readings,Assignments,Assignment_Video,Assignment_Reading,Live_Class
+from .models import Course,Videos,Exams,Subjects,Readings,Assignments,Assignment_Video,Assignment_Reading,Live_Class,\
+CommonExamQuestions,CommonExamAnswers
 # Register your models here.
 
 #For Courses
@@ -26,9 +27,16 @@ class AssignmentAdmin(admin.ModelAdmin):
         AssignmentVideoInline,
         AssignmentReadingInline,
     ]
-
+#For common exam
+class CommonAnswerInLine(admin.TabularInline):
+    model=CommonExamAnswers
+class CommonExamAdmin(admin.ModelAdmin):
+    inlines=[
+        CommonAnswerInLine,
+    ]
 admin.site.register(Course)
 admin.site.register(Subjects,SubjectAdmin)
 admin.site.register(Assignments,AssignmentAdmin)
 admin.site.register(Live_Class)
+admin.site.register(CommonExamQuestions,CommonExamAdmin)
 

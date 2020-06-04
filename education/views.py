@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import TemplateView,ListView,DetailView
-from .models import Course,Exams,Subjects,Videos,Assignments,Assignment_Video,Assignment_Reading,Live_Class
+from .models import Course,Exams,Subjects,Videos,Assignments,Assignment_Video,Assignment_Reading,Live_Class,\
+    CommonExamAnswers,CommonExamQuestions
 from django.http import HttpResponse
 from rest_framework import generics
-from .serializers import CourseSerializer
+from .serializers import CourseSerializer,QuesAnsSerializer
 import json
 # Create your views here.
 #some extra initialization
@@ -29,6 +30,12 @@ class SubjectDetailView(LoginRequiredMixin,DetailView):
     model=Subjects
     context_object_name='subject'
     login_url='login'
+#Common Exam
+class CommonExamView(LoginRequiredMixin,ListView):
+    template_name='common_exam.html'
+    model=CommonExamQuestions
+    login_url='login'
+    context_object_name='questions'
 #Assignment classes
 class AssignmentListView(LoginRequiredMixin,ListView):
     template_name='assignments_list.html'
@@ -49,6 +56,9 @@ class CourseListAPIView(generics.ListCreateAPIView):
 class CourseDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset=Course.objects.all()
     serializer_class=CourseSerializer
+class QueAnsAPIView(generics.ListCreateAPIView):
+    queryset=CommonExamQuestions.objects.all()
+    serializer_class=QuesAnsSerializer
 class TestView(TemplateView):
     template_name='test.html'
 #Request Functions
@@ -102,9 +112,17 @@ def Request_Live_List(request):
     count_dict['deadline']=deadline
     count_dict['topic_name']=topic_name
     return HttpResponse(json.dumps(count_dict))
-
-
-
+def Request_Question_Answer(request):
+    dict,ques,ans={},{},[]
+    a=CommonExamQuestions.objects.all()
+    for i in range(0,a.count()):
+    #    ques.append(a[i].question)
+        c=a[i].answer.all()
+        for j in c[i]:
+            pass
+        ques[a[i].question]=ans
+    dict['ques']=ques
+    return HttpResponse(json.dumps(dict))
 
 
     

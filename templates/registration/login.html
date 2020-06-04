@@ -4,7 +4,7 @@
 {%block content%}
 <div class="home-design"></div>
 <div class="rectangle_1"></div>
-<div class="website_name_top">DUMMY WEBSITE NAME</div>
+<div class="website_name_top">EDUCATIONER</div>
 <div class="rectangle_5">
     
 </div>
@@ -22,5 +22,26 @@
     
     <input class="login_text" type="submit" id="login" value="Login">
 </form>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times</span>
+            <h4 style="font-family: Lucida Console;">About:</h4>
+        </div>
+        <div style="font-family: Lucida Console;margin-top: 15px;">
+            This website is intentionaly built for screen resolution of 1920 x 1080px with absolute positioning system.
+            Later it will be migrated to a responsive view.
+            The purpose behind this website is to offer educational services,after it is completely 
+            developed.Currently it represents basic features such as :User Authorization for every page,
+            Database Management,Video Streaming,Interactive Front End and many more coming soon....
+            <p>For a temporary trip to the website you can use the following user credentials:</p>
+            Username:guestuser
+            <br>
+            Password:guest1234
+        </div>
+    </div>
+</div>
+<script src="{%static 'js/modal.js'%}"></script>
 {%endblock content%}
 
