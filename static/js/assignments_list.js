@@ -100,7 +100,7 @@ function check(count_dict){
             fortimer(type="clock",count_dict.deadline[i],id='timer1',left='100px',top='70px');
             var myVar1=setInterval(myTimer,1000,count_dict.deadline[i],id='timer1')
             fortimer(type="format",count_dict.deadline[i],id='format1',left='100px',top='70px');
-        }else if(i==1){
+        }else if(i==3){
             fortimer(type="clock",count_dict.deadline[i],id='timer4',left='100px',top='70px');
             var myVar2=setInterval(myTimer,1000,count_dict.deadline[i],id='timer4')
             fortimer(type="format",count_dict.deadline[i],id='format4',left='100px',top='70px');
